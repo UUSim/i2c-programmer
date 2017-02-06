@@ -1,4 +1,4 @@
-update=Wednesday, 11 January 2017 'pmt' 22:26:36
+update=Monday, 06 February 2017 'pmt' 20:13:46
 version=1
 last_client=kicad
 [pcbnew]
@@ -39,8 +39,8 @@ LibName7=contrib
 LibName8=cypress
 LibName9=device
 LibName10=digital-audio
-LibName11=dsp
-LibName12=display
+LibName11=display
+LibName12=dsp
 LibName13=ftdi
 LibName14=intel
 LibName15=interface
