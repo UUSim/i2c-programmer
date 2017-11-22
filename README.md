@@ -7,7 +7,6 @@ This repository hosts the Kicad-based design for a handheld i2c bus programmer/s
 - It's own clock (on separate i2c bus) + battery backup
 - Configurable i2c pullup resistors
 - Square wave signal of DS1307 accessible via header
-- USB PC interface
 
 Functions:
 - Scan for devices on i2c bus
@@ -16,6 +15,5 @@ Functions:
 - Set/Read time RTC on external i2c bus
 - Expose own RTC to external i2c bus
 - Communicate with i2c devices on bus
-- Log i2c-bus data to USB port
 
 ![Screenshot of project schematic](I2C-bus-programmer.sch.png)
