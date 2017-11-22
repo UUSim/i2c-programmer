@@ -43,10 +43,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Schematic for a handheld i2c-bus programmer/scanner"
-Date "2017-feb-6th"
-Rev "4"
+Date "2017-nov-22nd"
+Rev "5"
 Comp "Created by UUSim"
-Comment1 "With battery-backed real-time clock and USB interface"
+Comment1 "With battery-backed real-time clock"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -231,7 +231,6 @@ F 3 "" H 8650 750 50  0000 C CNN
 	1    8650 750 
 	1    0    0    -1  
 $EndComp
-NoConn ~ 10600 1950
 $Comp
 L LM7805CT U1
 U 1 1 58654727
@@ -1113,132 +1112,6 @@ LCD section
 Text Notes 9550 650  0    118  ~ 24
 MCU
 $Comp
-L USB_B P4
-U 1 1 588DDB0B
-P 850 3850
-F 0 "P4" H 1050 3650 50  0000 C CNN
-F 1 "USB_B" H 800 4050 50  0000 C CNN
-F 2 "Connectors:USB_B" V 800 3750 50  0001 C CNN
-F 3 "" V 800 3750 50  0000 C CNN
-	1    850  3850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L +5V #PWR047
-U 1 1 588DE2B6
-P 1500 4100
-F 0 "#PWR047" H 1500 3950 50  0001 C CNN
-F 1 "+5V" H 1500 4240 50  0000 C CNN
-F 2 "" H 1500 4100 50  0000 C CNN
-F 3 "" H 1500 4100 50  0000 C CNN
-	1    1500 4100
-	-1   0    0    1   
-$EndComp
-$Comp
-L GNDA #PWR048
-U 1 1 588DE33F
-P 1600 3450
-F 0 "#PWR048" H 1600 3200 50  0001 C CNN
-F 1 "GNDA" H 1600 3300 50  0000 C CNN
-F 2 "" H 1600 3450 50  0000 C CNN
-F 3 "" H 1600 3450 50  0000 C CNN
-	1    1600 3450
-	-1   0    0    1   
-$EndComp
-NoConn ~ 750  3550
-$Comp
-L D_Zener D2
-U 1 1 588DEC1D
-P 2500 4200
-F 0 "D2" H 2500 4300 50  0000 C CNN
-F 1 "3.6V,0.25W" H 2500 4100 50  0000 C CNN
-F 2 "Diodes_THT:Diode_DO-35_SOD27_Horizontal_RM10" H 2500 4200 50  0001 C CNN
-F 3 "" H 2500 4200 50  0000 C CNN
-	1    2500 4200
-	0    1    1    0   
-$EndComp
-$Comp
-L D_Zener D1
-U 1 1 588DEEA7
-P 1950 4200
-F 0 "D1" H 1950 4300 50  0000 C CNN
-F 1 "3.6V,0.25W" H 1950 4100 50  0000 C CNN
-F 2 "Diodes_THT:Diode_DO-35_SOD27_Horizontal_RM10" H 1950 4200 50  0001 C CNN
-F 3 "" H 1950 4200 50  0000 C CNN
-	1    1950 4200
-	0    1    1    0   
-$EndComp
-$Comp
-L R R7
-U 1 1 588DF410
-P 2700 3850
-F 0 "R7" V 2600 3850 50  0000 C CNN
-F 1 "68Ω" V 2700 3850 50  0000 C CNN
-F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 2630 3850 50  0001 C CNN
-F 3 "" H 2700 3850 50  0000 C CNN
-	1    2700 3850
-	0    1    1    0   
-$EndComp
-$Comp
-L R R8
-U 1 1 588DF5A6
-P 2700 3950
-F 0 "R8" V 2780 3950 50  0000 C CNN
-F 1 "68Ω" V 2700 3950 50  0000 C CNN
-F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 2630 3950 50  0001 C CNN
-F 3 "" H 2700 3950 50  0000 C CNN
-	1    2700 3950
-	0    1    1    0   
-$EndComp
-Text GLabel 2900 3850 2    47   BiDi ~ 0
-USB_D+
-Text GLabel 2900 3950 2    47   BiDi ~ 0
-USB_D-
-$Comp
-L GNDA #PWR049
-U 1 1 588E027E
-P 1950 4400
-F 0 "#PWR049" H 1950 4150 50  0001 C CNN
-F 1 "GNDA" H 1950 4250 50  0000 C CNN
-F 2 "" H 1950 4400 50  0000 C CNN
-F 3 "" H 1950 4400 50  0000 C CNN
-	1    1950 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L GNDA #PWR050
-U 1 1 588E0313
-P 2500 4400
-F 0 "#PWR050" H 2500 4150 50  0001 C CNN
-F 1 "GNDA" H 2500 4250 50  0000 C CNN
-F 2 "" H 2500 4400 50  0000 C CNN
-F 3 "" H 2500 4400 50  0000 C CNN
-	1    2500 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L CP C14
-U 1 1 588E154A
-P 1800 3500
-F 0 "C14" H 1825 3600 50  0000 L CNN
-F 1 "4.7μF" H 1700 3400 50  0000 L CNN
-F 2 "Capacitors_THT:C_Radial_D5_L11_P2" H 1838 3350 50  0001 C CNN
-F 3 "" H 1800 3500 50  0000 C CNN
-	1    1800 3500
-	0    1    1    0   
-$EndComp
-$Comp
-L +5V #PWR051
-U 1 1 588E344A
-P 2000 3450
-F 0 "#PWR051" H 2000 3300 50  0001 C CNN
-F 1 "+5V" H 2000 3590 50  0000 C CNN
-F 2 "" H 2000 3450 50  0000 C CNN
-F 3 "" H 2000 3450 50  0000 C CNN
-	1    2000 3450
-	1    0    0    -1  
-$EndComp
-$Comp
 L ATMEGA328P-P IC1
 U 1 1 58643318
 P 9600 1900
@@ -1249,60 +1122,6 @@ F 3 "" H 9600 1900 50  0000 C CNN
 	1    9600 1900
 	1    0    0    -1  
 $EndComp
-Text GLabel 10650 2600 2    47   BiDi ~ 0
-USB_D+
-Text GLabel 10650 2800 2    47   BiDi ~ 0
-USB_D-
-$Comp
-L R R9
-U 1 1 588E6912
-P 2700 3650
-F 0 "R9" V 2600 3650 50  0000 C CNN
-F 1 "2.2kΩ" V 2700 3650 50  0000 C CNN
-F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 2630 3650 50  0001 C CNN
-F 3 "" H 2700 3650 50  0000 C CNN
-	1    2700 3650
-	0    1    1    0   
-$EndComp
-$Comp
-L Jumper_NC_Small JP8
-U 1 1 588EC18D
-P 1350 3750
-F 0 "JP8" H 1350 3830 50  0000 C CNN
-F 1 "JMP" H 1360 3690 50  0000 C CNN
-F 2 "open-project:S_JUMPER_2" H 1350 3750 50  0001 C CNN
-F 3 "" H 1350 3750 50  0000 C CNN
-	1    1350 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper_NC_Small JP9
-U 1 1 588EC241
-P 1350 4050
-F 0 "JP9" H 1350 4130 50  0000 C CNN
-F 1 "JMP" H 1360 3990 50  0000 C CNN
-F 2 "open-project:S_JUMPER_2" H 1350 4050 50  0001 C CNN
-F 3 "" H 1350 4050 50  0000 C CNN
-	1    1350 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L PWR_FLAG #FLG052
-U 1 1 588EF27E
-P 1200 3650
-F 0 "#FLG052" H 1200 3745 50  0001 C CNN
-F 1 "PWR_FLAG" H 1200 3830 50  0000 C CNN
-F 2 "" H 1200 3650 50  0000 C CNN
-F 3 "" H 1200 3650 50  0000 C CNN
-	1    1200 3650
-	1    0    0    -1  
-$EndComp
-Text Notes 650  3200 0    118  ~ 24
-USB interface
-Text GLabel 2900 3650 2    47   BiDi ~ 0
-USB_Conn
-Text GLabel 10650 2900 2    47   BiDi ~ 0
-USB_Conn
 $Comp
 L R R10
 U 1 1 5897A396
@@ -1315,10 +1134,10 @@ F 3 "" H 1300 5650 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L +5V #PWR053
+L +5V #PWR047
 U 1 1 5897A455
 P 1800 5450
-F 0 "#PWR053" H 1800 5300 50  0001 C CNN
+F 0 "#PWR047" H 1800 5300 50  0001 C CNN
 F 1 "+5V" H 1800 5590 50  0000 C CNN
 F 2 "" H 1800 5450 50  0000 C CNN
 F 3 "" H 1800 5450 50  0000 C CNN
@@ -1452,10 +1271,10 @@ SDA_Rtc
 Text GLabel 3850 6050 2    47   BiDi ~ 0
 SCL_Rtc
 $Comp
-L +5V #PWR054
+L +5V #PWR048
 U 1 1 5898308A
 P 3350 5500
-F 0 "#PWR054" H 3350 5350 50  0001 C CNN
+F 0 "#PWR048" H 3350 5350 50  0001 C CNN
 F 1 "+5V" H 3350 5640 50  0000 C CNN
 F 2 "" H 3350 5500 50  0000 C CNN
 F 3 "" H 3350 5500 50  0000 C CNN
@@ -1464,8 +1283,6 @@ F 3 "" H 3350 5500 50  0000 C CNN
 $EndComp
 Text Notes 3100 5300 0    118  ~ 24
 i2c pullups
-NoConn ~ 10600 1750
-NoConn ~ 10600 3000
 Text Notes 5300 5500 0    118  ~ 24
 isolated i2c\npull-ups switch\n
 $Comp
@@ -1494,8 +1311,6 @@ Text GLabel 5700 5750 0    47   BiDi ~ 0
 SDA_Iso
 Text GLabel 5700 6050 0    47   BiDi ~ 0
 SCL_Iso
-NoConn ~ 6150 6150
-NoConn ~ 6150 5850
 $Comp
 L R R22
 U 1 1 5898DC86
@@ -1623,36 +1438,36 @@ $EndComp
 $Comp
 L AVR-ISP-6 CON2
 U 1 1 58996DA5
-P 8650 4600
-F 0 "CON2" H 8545 4840 50  0000 C CNN
-F 1 "AVR-ISP-6" H 8385 4370 50  0000 L BNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x03" V 8130 4640 50  0001 C CNN
-F 3 "" H 8625 4600 50  0000 C CNN
-	1    8650 4600
+P 8650 5700
+F 0 "CON2" H 8545 5940 50  0000 C CNN
+F 1 "AVR-ISP-6" H 8385 5470 50  0000 L BNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x03" V 8130 5740 50  0001 C CNN
+F 3 "" H 8625 5700 50  0000 C CNN
+	1    8650 5700
 	1    0    0    -1  
 $EndComp
-Text GLabel 8200 4700 0    47   Input ~ 0
+Text GLabel 8200 5800 0    47   Input ~ 0
 Reset
 $Comp
-L GNDA #PWR055
+L GNDA #PWR049
 U 1 1 58998D9B
-P 8850 4800
-F 0 "#PWR055" H 8850 4550 50  0001 C CNN
-F 1 "GNDA" H 8850 4650 50  0000 C CNN
-F 2 "" H 8850 4800 50  0000 C CNN
-F 3 "" H 8850 4800 50  0000 C CNN
-	1    8850 4800
+P 8850 5900
+F 0 "#PWR049" H 8850 5650 50  0001 C CNN
+F 1 "GNDA" H 8850 5750 50  0000 C CNN
+F 2 "" H 8850 5900 50  0000 C CNN
+F 3 "" H 8850 5900 50  0000 C CNN
+	1    8850 5900
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR056
+L +5V #PWR050
 U 1 1 5899905C
-P 8850 4400
-F 0 "#PWR056" H 8850 4250 50  0001 C CNN
-F 1 "+5V" H 8850 4540 50  0000 C CNN
-F 2 "" H 8850 4400 50  0000 C CNN
-F 3 "" H 8850 4400 50  0000 C CNN
-	1    8850 4400
+P 8850 5500
+F 0 "#PWR050" H 8850 5350 50  0001 C CNN
+F 1 "+5V" H 8850 5640 50  0000 C CNN
+F 2 "" H 8850 5500 50  0000 C CNN
+F 3 "" H 8850 5500 50  0000 C CNN
+	1    8850 5500
 	1    0    0    -1  
 $EndComp
 Text GLabel 11000 1150 2    39   Input ~ 0
@@ -1661,38 +1476,229 @@ Text GLabel 11000 1250 2    39   Input ~ 0
 MISO
 Text GLabel 11000 1350 2    39   Input ~ 0
 CLK
-Wire Wire Line
-	1500 4050 1450 4050
-Wire Wire Line
-	1150 4050 1250 4050
-Wire Wire Line
-	1150 3750 1250 3750
-Wire Wire Line
-	10600 2600 10650 2600
-Wire Wire Line
-	1600 3450 1600 3750
-Wire Wire Line
-	2850 3850 2900 3850
-Wire Wire Line
-	2850 3950 2900 3950
-Connection ~ 1950 3950
-Connection ~ 2500 3850
-Wire Wire Line
-	2500 4350 2500 4400
-Wire Wire Line
-	1950 4350 1950 4400
-Wire Wire Line
-	2500 3850 2500 4050
-Wire Wire Line
-	1150 3850 2550 3850
-Wire Wire Line
-	1950 3650 1950 4050
-Wire Wire Line
-	1150 3950 2550 3950
-Wire Wire Line
-	1600 3750 1450 3750
-Wire Wire Line
-	1500 4050 1500 4100
+Text GLabel 8200 5700 0    47   Input ~ 0
+CLK
+Text GLabel 8200 5600 0    47   Input ~ 0
+MISO
+Text GLabel 9050 5700 2    47   Input ~ 0
+MOSI
+Text Notes 7900 5300 0    118  ~ 24
+isp header
+$Comp
+L R R28
+U 1 1 589A2AB2
+P 10300 5850
+F 0 "R28" V 10380 5850 50  0000 C CNN
+F 1 "100Ω" V 10300 5850 50  0000 C CNN
+F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 10230 5850 50  0001 C CNN
+F 3 "" H 10300 5850 50  0000 C CNN
+	1    10300 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R29
+U 1 1 589A2E1F
+P 10600 5850
+F 0 "R29" V 10680 5850 50  0000 C CNN
+F 1 "100Ω" V 10600 5850 50  0000 C CNN
+F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 10530 5850 50  0001 C CNN
+F 3 "" H 10600 5850 50  0000 C CNN
+	1    10600 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW2
+U 1 1 58A0C0C0
+P 8050 3800
+F 0 "SW2" H 8100 3900 50  0000 L CNN
+F 1 "SW_Push" H 8050 3740 50  0000 C CNN
+F 2 "Buttons_Switches_THT:SW_Tactile_SPST_Angled" H 8050 4000 50  0001 C CNN
+F 3 "" H 8050 4000 50  0000 C CNN
+	1    8050 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R30
+U 1 1 58A0C200
+P 8300 3600
+F 0 "R30" V 8380 3600 50  0000 C CNN
+F 1 "10kΩ" V 8300 3600 50  0000 C CNN
+F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 8230 3600 50  0001 C CNN
+F 3 "" H 8300 3600 50  0000 C CNN
+	1    8300 3600
+	1    0    0    -1  
+$EndComp
+Text GLabel 10650 1950 2    47   Input ~ 0
+Button1
+$Comp
+L +5V #PWR051
+U 1 1 58A0D80B
+P 8300 3400
+F 0 "#PWR051" H 8300 3250 50  0001 C CNN
+F 1 "+5V" H 8300 3540 50  0000 C CNN
+F 2 "" H 8300 3400 50  0000 C CNN
+F 3 "" H 8300 3400 50  0000 C CNN
+	1    8300 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR052
+U 1 1 58A0D8FD
+P 8300 3850
+F 0 "#PWR052" H 8300 3600 50  0001 C CNN
+F 1 "GNDA" H 8300 3700 50  0000 C CNN
+F 2 "" H 8300 3850 50  0000 C CNN
+F 3 "" H 8300 3850 50  0000 C CNN
+	1    8300 3850
+	1    0    0    -1  
+$EndComp
+Text GLabel 7800 3800 0    47   Input ~ 0
+Button1
+Text Notes 7650 3200 0    118  ~ 24
+button 1
+$Comp
+L CONN_01X01 P5
+U 1 1 5A1646E6
+P 6400 6150
+F 0 "P5" H 6350 6200 50  0000 C CNN
+F 1 "CONN_01X01" H 6750 6100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 6400 6150 50  0001 C CNN
+F 3 "" H 6400 6150 50  0000 C CNN
+	1    6400 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P4
+U 1 1 5A164964
+P 6400 5850
+F 0 "P4" H 6350 5900 50  0000 C CNN
+F 1 "CONN_01X01" H 6750 5800 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 6400 5850 50  0001 C CNN
+F 3 "" H 6400 5850 50  0000 C CNN
+	1    6400 5850
+	1    0    0    -1  
+$EndComp
+Text GLabel 10650 1750 2    47   BiDi ~ 0
+Pin_PC1
+Text GLabel 10650 2600 2    47   BiDi ~ 0
+Pin_PD2
+Text GLabel 10650 2800 2    47   BiDi ~ 0
+Pin_PD4
+Text GLabel 10650 2900 2    47   BiDi ~ 0
+Pin_PD5
+Text GLabel 10650 3000 2    47   BiDi ~ 0
+Pin_PD6
+Text Notes 600  3200 0    118  ~ 24
+Unused pins
+Text GLabel 1100 4250 0    47   BiDi ~ 0
+Pin_PD6
+Text GLabel 1100 4050 0    47   BiDi ~ 0
+Pin_PD5
+Text GLabel 1100 3850 0    47   BiDi ~ 0
+Pin_PD4
+Text GLabel 1100 3450 0    47   BiDi ~ 0
+Pin_PC1
+Text GLabel 1100 3650 0    47   BiDi ~ 0
+Pin_PD2
+$Comp
+L CONN_01X01 P6
+U 1 1 5A16AB67
+P 1350 3450
+F 0 "P6" H 1350 3550 50  0000 C CNN
+F 1 "CONN_01X01" H 1700 3450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 1350 3450 50  0001 C CNN
+F 3 "" H 1350 3450 50  0000 C CNN
+	1    1350 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P7
+U 1 1 5A16AEAE
+P 1350 3650
+F 0 "P7" H 1350 3750 50  0000 C CNN
+F 1 "CONN_01X01" H 1700 3650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 1350 3650 50  0001 C CNN
+F 3 "" H 1350 3650 50  0000 C CNN
+	1    1350 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P8
+U 1 1 5A16AF96
+P 1350 3850
+F 0 "P8" H 1350 3950 50  0000 C CNN
+F 1 "CONN_01X01" H 1700 3850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 1350 3850 50  0001 C CNN
+F 3 "" H 1350 3850 50  0000 C CNN
+	1    1350 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P9
+U 1 1 5A16B081
+P 1350 4050
+F 0 "P9" H 1350 4150 50  0000 C CNN
+F 1 "CONN_01X01" H 1700 4050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 1350 4050 50  0001 C CNN
+F 3 "" H 1350 4050 50  0000 C CNN
+	1    1350 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P10
+U 1 1 5A16B171
+P 1350 4250
+F 0 "P10" H 1350 4350 50  0000 C CNN
+F 1 "CONN_01X01" H 1700 4250 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 1350 4250 50  0001 C CNN
+F 3 "" H 1350 4250 50  0000 C CNN
+	1    1350 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P11
+U 1 1 5A16B486
+P 1350 4650
+F 0 "P11" H 1350 4750 50  0000 C CNN
+F 1 "CONN_01X01" H 1700 4650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 1350 4650 50  0001 C CNN
+F 3 "" H 1350 4650 50  0000 C CNN
+	1    1350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X01 P12
+U 1 1 5A16B57C
+P 1350 4850
+F 0 "P12" H 1350 4950 50  0000 C CNN
+F 1 "CONN_01X01" H 1700 4850 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01" H 1350 4850 50  0001 C CNN
+F 3 "" H 1350 4850 50  0000 C CNN
+	1    1350 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDA #PWR053
+U 1 1 5A16B89C
+P 1100 4900
+F 0 "#PWR053" H 1100 4650 50  0001 C CNN
+F 1 "GNDA" H 1100 4750 50  0000 C CNN
+F 2 "" H 1100 4900 50  0000 C CNN
+F 3 "" H 1100 4900 50  0000 C CNN
+	1    1100 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR054
+U 1 1 5A16BA2D
+P 1100 4600
+F 0 "#PWR054" H 1100 4450 50  0001 C CNN
+F 1 "+5V" H 1100 4740 50  0000 C CNN
+F 2 "" H 1100 4600 50  0000 C CNN
+F 3 "" H 1100 4600 50  0000 C CNN
+	1    1100 4600
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	4000 3550 4000 3600
 Wire Wire Line
@@ -2016,27 +2022,9 @@ Wire Wire Line
 Wire Wire Line
 	1350 2150 2300 2150
 Wire Wire Line
-	1650 3500 1600 3500
-Connection ~ 1600 3500
-Wire Wire Line
-	1200 3650 1200 3750
-Connection ~ 1200 3750
-Wire Wire Line
-	1950 3500 2000 3500
-Wire Wire Line
-	2000 3500 2000 3450
-Wire Wire Line
-	2900 3650 2850 3650
-Wire Wire Line
-	2550 3650 1950 3650
-Wire Wire Line
 	6400 1850 6400 1900
 Wire Wire Line
 	6400 2100 6400 2150
-Wire Wire Line
-	10650 2800 10600 2800
-Wire Wire Line
-	10600 2900 10650 2900
 Wire Wire Line
 	10600 2700 10650 2700
 Wire Wire Line
@@ -2158,15 +2146,15 @@ Wire Wire Line
 Wire Wire Line
 	5000 2000 4850 2000
 Wire Wire Line
-	8200 4700 8500 4700
+	8200 5800 8500 5800
 Wire Wire Line
-	8750 4700 8850 4700
+	8750 5800 8850 5800
 Wire Wire Line
-	8850 4700 8850 4800
+	8850 5800 8850 5900
 Wire Wire Line
-	8750 4500 8850 4500
+	8750 5600 8850 5600
 Wire Wire Line
-	8850 4500 8850 4400
+	8850 5600 8850 5500
 Wire Wire Line
 	10650 1200 10650 1250
 Wire Wire Line
@@ -2182,46 +2170,59 @@ Wire Wire Line
 Wire Wire Line
 	10650 1350 11000 1350
 Connection ~ 10650 1300
-Text GLabel 8200 4600 0    47   Input ~ 0
-CLK
-Text GLabel 8200 4500 0    47   Input ~ 0
-MISO
-Text GLabel 9050 4600 2    47   Input ~ 0
-MOSI
 Wire Wire Line
-	8200 4500 8500 4500
+	8200 5600 8500 5600
 Wire Wire Line
-	8200 4600 8500 4600
+	8200 5700 8500 5700
 Wire Wire Line
-	9050 4600 8750 4600
-Text Notes 7900 4200 0    118  ~ 24
-isp header
+	9050 5700 8750 5700
 Wire Wire Line
 	10300 6000 10300 6050
 Connection ~ 10300 5650
-$Comp
-L R R28
-U 1 1 589A2AB2
-P 10300 5850
-F 0 "R28" V 10380 5850 50  0000 C CNN
-F 1 "100Ω" V 10300 5850 50  0000 C CNN
-F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 10230 5850 50  0001 C CNN
-F 3 "" H 10300 5850 50  0000 C CNN
-	1    10300 5850
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R29
-U 1 1 589A2E1F
-P 10600 5850
-F 0 "R29" V 10680 5850 50  0000 C CNN
-F 1 "100Ω" V 10600 5850 50  0000 C CNN
-F 2 "Resistors_Universal:Resistor_SMD+THTuniversal_0805to1206_RM10_HandSoldering" V 10530 5850 50  0001 C CNN
-F 3 "" H 10600 5850 50  0000 C CNN
-	1    10600 5850
-	1    0    0    -1  
-$EndComp
 Connection ~ 10600 5650
 Wire Wire Line
 	10600 6000 10600 6050
+Wire Wire Line
+	10600 1950 10650 1950
+Wire Wire Line
+	8300 3400 8300 3450
+Wire Wire Line
+	8300 3750 8300 3850
+Wire Wire Line
+	8250 3800 8300 3800
+Connection ~ 8300 3800
+Wire Wire Line
+	7850 3800 7800 3800
+Wire Wire Line
+	6150 6150 6200 6150
+Wire Wire Line
+	6150 5850 6200 5850
+Wire Wire Line
+	10600 1750 10650 1750
+Wire Wire Line
+	10600 2600 10650 2600
+Wire Wire Line
+	10600 2800 10650 2800
+Wire Wire Line
+	10600 2900 10650 2900
+Wire Wire Line
+	10600 3000 10650 3000
+Wire Wire Line
+	1100 3450 1150 3450
+Wire Wire Line
+	1150 3650 1100 3650
+Wire Wire Line
+	1100 3850 1150 3850
+Wire Wire Line
+	1100 4050 1150 4050
+Wire Wire Line
+	1100 4250 1150 4250
+Wire Wire Line
+	1100 4600 1100 4650
+Wire Wire Line
+	1100 4650 1150 4650
+Wire Wire Line
+	1100 4900 1100 4850
+Wire Wire Line
+	1100 4850 1150 4850
 $EndSCHEMATC
